@@ -7,8 +7,7 @@ import { RequestFlowScreen } from './components/RequestFlowScreen';
 import { AnalyticsScreen } from './components/AnalyticsScreen';
 import { AppBundlesScreen } from './components/AppBundlesScreen';
 import { Header } from './components/Header';
-import zluriLogo from 'figma:asset/598003827e2259a93b44cd4ee3eaa11d8568a604.png';
-
+const zluriLogo = "Zluri"; 
 type Screen = 'catalog' | 'appDetails' | 'myApps' | 'requestFlow' | 'analytics' | 'bundles';
 
 interface AppData {
@@ -239,13 +238,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header */}
-      <Header 
-        currentScreen={currentScreen}
-        onBack={handleBackNavigation}
-        userProfile={userProfile}
-        logo={zluriLogo}
-      />
-
+     <Header 
+  currentScreen={currentScreen}
+  onBack={handleBackNavigation}
+  userProfile={userProfile}
+/>
       {/* Main Content */}
       <main className="pb-20">
         {currentScreen === 'catalog' && (
